@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300");
+
+
+
+.reset_body{
+	width: 100vw;
+    min-height: 100vh;
+    display: flex;
+	align-items: center !important;
+	background-color: #eaeaea;
+}
+.activate_lavel{
+	text-align: center;
+	padding: 30px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.reset_App {
+	background-color: white;
+	padding: 30px 0;
+	width: 520px;
+	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow: 0px 4px 30px -5px rgba(0, 0, 0, 0.65);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.header_label{
+		font-size: 2em;
+		color: #3a3434;
+		margin-bottom: 30px
+	}
+	.input-container {
+		position: relative;
+		margin-bottom: 30px;
+		width: 340px;
+	}
+	
+	input, button {
+		font-family: 'Dosis', sans-serif;
+		letter-spacing: 1.3px;
+		width: 340px;
+	}
+	
+	input {
+		box-sizing: border-box;
+		background: transparent;
+		width: 100%;
+		border: none;
+		border: 1px solid #e4e7ea;
+		border-radius: 5px;
+		color: black;
+		padding: 5px 9px 4px 36px;
+		font-size: 16px;
+		outline: none;
+	}
+	
+	
+	input:focus {
+		
+		border-image-slice: 1;
+	}
+	
+	input:focus + i {
+		color:black;
+	}
+	
+	::placeholder {
+		color: black;
+		opacity: .5;
+		font-weight: 700;
+	}
+	
+	i {
+		color: #626571;
+		position: absolute;
+		left: 6px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: color .3s;
+	}
+	
+	button {
+		color: white;
+		font-size: 16px;
+		
+		cursor: pointer;
+		transition: all .3s;
+		box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.65);
+		transition: all .3s;
+		float: left;
+	}
+	
+	button:hover {
+		background: #3f4048;
+		box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.65);
+	}
+}
+
+
+
+@media screen and (max-width: 620px) {
+	.reset_App {
+		min-height: 300px;
+		max-height: 430px;
+		width: 90vw;
+
+		.input-container {
+			width: 80%;
+			margin-bottom: 40px;
+		}
+	
+		button {
+			margin-top: 10px;
+			margin-bottom: -20px;
+			width: 250px;
+		}
+	}
+
+	
+}

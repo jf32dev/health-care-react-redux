@@ -1,0 +1,55 @@
+.post_detail_app{
+	.input-group-text{
+		width: 130px;
+	}
+	.profile-user-img{
+		width: 145px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	}
+      
+	.avatar-upload {
+		position: relative;
+		max-width: 100%;
+		margin: auto;
+		margin-bottom: 20px;
+
+		.avatar-preview{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img{
+				max-width: 100%;
+			}
+		}
+	
+		.avatar-edit {
+			text-align: center;
+			z-index: 1;
+				
+			label{
+				margin-top:10px;
+				padding-top:5px;
+			}
+			input {
+				display: none;
+				+ label {
+					display: inline-block;
+					width: 131px;
+					height: 34px;
+					margin-bottom: 0;
+					border-radius: 100%;
+					background: #FFFFFF;
+					border: 1px solid #d2d6de;
+					box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+					cursor: pointer;           
+					font-weight: normal;
+					transition: all .2s ease-in-out;
+					&:hover {
+							background: #f1f1f1;
+							border-color: #d6d6d6;
+					}
+				}
+			}
+		}
+	}
+}

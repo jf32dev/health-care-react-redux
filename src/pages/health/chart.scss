@@ -1,0 +1,204 @@
+.modal{
+    z-index:1050 !important;
+}
+.modal-content{
+    padding:10px 10px !important;
+}
+
+.fixed_header{
+    width:100%;
+    
+    .header_part{
+        .select_range_div{
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto 20px auto;
+            background-color: #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            .range-btn{
+                width: 65px;
+                max-width: 25%;
+                background-color: #ccc;
+                color: black;
+                margin: 0;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                height: 30px;
+                &.active {
+                    background-color: white;
+                    box-shadow: 0px 3px 3px rgba($color: #000000, $alpha: 0.1);
+                }
+                &.sleep-btn {
+                    max-width: 50%;
+                }
+            }
+        }
+        .select_date_range{
+            max-width: 100%;
+            width: fit-content;
+            margin: 0 auto;
+            div {
+                max-width: 50%;
+            }
+            .date_to_div{
+                margin-left: 15px;
+            }
+            .date_select_input {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+    .chart_total_value{
+        margin-top: 20px;
+        display: flex;
+        max-width: 100%;
+        overflow-x: auto;
+        .show_total_step_div {   
+            margin-right:10px;
+            p {
+                display:flex;
+                margin: 0;
+            }
+            .total_steps_header{
+                min-width:110px;
+                font-weight: 600;
+            }
+            .total_steps_label{
+                font-size:1.1em;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+            .total_steps_value{
+                font-size:1.2em;
+                font-weight: 600;
+                margin-right: 4px;
+                color: #314d81;
+            }
+
+        }
+    }
+}
+
+.chart_total {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    .chart-info {
+        justify-content: space-between;
+        margin-bottom: 10px;
+        p {
+            margin: 0;
+        }
+    }
+    .chart_div{
+        .chart_desktop{
+            display:block;
+            flex: 1;
+            // height: 200px;
+            width: calc(100% - 86px);
+        }
+        .chart_mobile{
+            display:none;
+            flex: 1;
+            position: relative;
+        }
+        display: flex;
+        // width: 100%;
+    }
+}
+
+.chart_unit{
+    font-size:0.9em;
+    align-self: center;
+}
+
+.manual_add_button{
+    display:flex;
+    height: fit-content;
+    .zmdi-plus-circle{
+        justify-content: center;
+        align-self: center;
+        margin-right:5px;
+    }
+}
+.step_date_button{
+    border:none;
+    background:transparent;
+    padding: 0;
+    width: 43px;
+    cursor: pointer;
+    &:hover {
+        background-color: #ccc;
+    }
+    label {
+        height: 100%;
+    }
+}
+
+.step_date_button:focus{
+    border:none;
+    outline: none !important;
+}
+.disable_step_date{
+    color: #917e7a;
+    cursor: not-allowed;
+    label{
+        color: #917e7a;
+        cursor: not-allowed;
+    }
+}
+
+.mobileview_prev,.mobileview_next {
+    display:none;
+}
+.webview_prev,.webview_next {
+    height: 250px;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #d64328;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    label {
+        font-size: 70pt;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .mobile_show_active{
+        display:block;
+    }
+    .mobileview_prev,.mobileview_next {
+        display:block !important;
+        cursor: pointer;
+    
+        transition: opacity .2s;
+    
+        color: #d64328;
+        font-size: 26pt;
+        text-align: center;
+    
+        font-family: "Varela Round", sans-serif;
+    }
+    .webview_prev,.webview_next {
+        display:none
+    }
+    .chart_div { 
+        margin-top:5px;
+        margin-right: -1.25rem;
+        margin-left: -1.25rem;
+        .chart_desktop{
+            width: 100% !important;
+        }
+        .chart_mobile{
+            display:block !important;
+            height: 200px;
+        }
+    }
+}

@@ -1,0 +1,282 @@
+// import coreui icons Set
+@import '~@coreui/icons/css/all.css';
+
+// import coreui styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// fix for reactstrap
+@import '~@coreui/coreui/scss/_dropdown-menu-right.scss';
+
+@import "~react-table/react-table.css";
+
+@import "./Custom.scss";
+
+@import './resources/fonts/fontawesome-5.15.1/scss/fontawesome.scss';
+@import './resources/fonts/fontawesome-5.15.1/scss/solid.scss';
+@import './resources/fonts/fontawesome-5.15.1/scss/brands.scss';
+@import './resources/fonts/fontawesome-5.15.1/scss/regular.scss';
+@import './resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css';  
+
+
+// import custom fonts
+@mixin fontFace($family, $src, $style: normal, $weight: 400) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.ttf') format('truetype');
+		// src: url('#{$src}.eot'); // IE9 compat
+		// src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+		// 	url('#{$src}.woff') format('woff'), // standards
+		// 	url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+		// 	url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Thin', normal, 100);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-ThinItalic', italic, 100);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-ExtraLight', normal, 200);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-ExtraLightItalic', italic, 200);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Light', normal, 300);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-LightItalic', italic, 300);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Regular', normal, 400);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Italic', italic, 400);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Medium', normal, 500);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-MediumItalic', italic, 500);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-SemiBold', normal, 600);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-SemiBoldItalic', italic, 600);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Bold', normal, 700);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-BoldItalic', italic, 700);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-ExtraBold', normal, 800);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-ExtraBoldItalic', italic, 800);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-Black', normal, 900);
+@include fontFace('Poppins', './resources/fonts/poppins/Poppins-BlackItalic', italic, 900);
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('./resources/fonts/poppins/Poppins-Regular.ttf'); 
+}
+  
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('./resources/fonts/poppins/Poppins-Bold.ttf'); 
+}
+  
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('./resources/fonts/poppins/Poppins-Medium.ttf'); 
+}
+  
+@font-face {
+	font-family: Raleway-Regular;
+	src: url('./resources/fonts/raleway/Raleway-Regular.ttf'); 
+}
+  
+@font-face {
+	font-family: Raleway-Black;
+	src: url('./resources/fonts/raleway/Raleway-Black.ttf'); 
+}
+  
+@font-face {
+	font-family: Raleway-SemiBold;
+	src: url('./resources/fonts/raleway/Raleway-SemiBold.ttf'); 
+}
+  
+@font-face {
+	font-family: Raleway-Bold;
+	src: url('./resources/fonts/raleway/Raleway-Bold.ttf'); 
+}
+
+
+html, body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .text-center {
+    text-align: center;
+  }
+	.breadcrumb{
+		position:fixed;
+		width: 100%;
+	}
+  .v-c {
+    display: flex;
+    align-items: center;
+  }
+
+  .h-c {
+    display: flex;
+    justify-content: center;
+	}
+	
+	.v-r {
+		display: flex;
+		flex-direction: column;
+	}
+  .app-header.navbar{
+    flex-wrap: inherit;
+    .nav-link{
+	  padding:0;
+	  height: 50px;
+    }
+  }
+  .app-header.navbar .navbar-nav{
+    margin-bottom:0px !important;
+	} 
+	.btn-logout{
+		background-color: #314d81;
+		color:white;
+		float:right;
+		margin-right:2%;
+	}
+	.navbar-brand-minimized{
+		width: 200px;
+		height: 80px !important;
+	}
+	.input-group-text i{
+		color: #d34736
+	}
+	.btn-logout:hover{
+		background-color: #4a6dac;
+		color:white;
+		float:right;
+	}
+
+	.app {
+		height: 100vh;
+	}
+
+	.app-body{
+		height: calc(100vh - 55px);
+		.nav {
+			margin-bottom: 0px;
+		}
+		a {
+			color:#d4391d;
+		}
+		.card-header{
+			background-color: #314d81;
+			color:white;
+		}
+	} 
+	.sidebar{
+		background:#314d81;
+		.nav-link.active {
+			background-color:#d4665b;
+			.nav-icon{
+				color:white
+			}
+		}
+
+		.nav-item {
+			.nav-icon{
+				color:white
+			}
+		}
+	}
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.layout-breadcrumb {
+		position: relative;
+		z-index: 200;
+	}
+	.main-body {
+		flex: 1;
+		height: 100%;
+		padding: 60px 15px 1.5rem 15px !important;
+	}
+}
+
+.header-link {
+	&.active {
+		color: #d4665b !important;
+	}
+}
+
+.shadow-object {
+	box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.5);
+}
+
+@media screen and (min-width: 992px) {
+	.show-web {
+			display: block;
+	}
+
+	.show-web-flex {
+			display: flex;
+	}
+
+	.show-mobile, .show-mobile-flex {
+			display: none !important;
+	}
+
+	::-webkit-scrollbar-track {
+			background: none;
+	}
+
+	::-webkit-scrollbar-thumb {
+			background: #1B1F25; 
+			border-radius: 40px;
+	}
+
+	::-webkit-scrollbar {
+			width: 10px;
+			height: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+			background: #BDBDBD; 
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.show-mobile {
+			display: block;
+	}
+
+	.show-web, .show-web-flex {
+			display: none !important;
+	}
+
+	.show-mobile-flex {
+			display: flex;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1520px;
+  }
+}
+
+.showdow-box{
+	width: 60%;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom:100px;
+	padding:21px 47px 27px 47px;
+	box-shadow: 0 6px 8px rgba(0,0,0,.26);
+	background-color:#ededed;
+}
+
+
+@media (max-width: 480px) {
+	.showdow-box{
+		width: 93%;
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom:100px;
+		padding:10px;
+		box-shadow: 0 6px 8px rgba(0,0,0,.26);
+		background-color:#ededed;
+	}
+}

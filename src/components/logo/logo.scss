@@ -1,0 +1,44 @@
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+  img {
+    margin-right: 8px;
+  }
+  span {
+    font-weight: bold;
+    &:first-child {
+      color: #002363;
+    }
+    &:last-child {
+      color: #D4391D;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .logo-link {
+    img {
+      width: 46px;
+      height: 46px;
+    }
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .logo-link {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+}

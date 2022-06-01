@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300");
+
+.register_body{
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	align-items: center !important;
+	background-color: #eaeaea;
+}
+.register_App {
+	background:white;
+	height: 540px;
+	width: 520px;
+	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow: 0px 4px 30px -5px rgba(0, 0, 0, 0.65);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.header_label{
+		font-size: 2em;
+		color: #3a3434;
+	}
+	.small_label{
+		color: grey;
+	}
+	.input-container {
+		position: relative;
+		//margin-bottom: 30px;
+		width: 440px;
+	}
+	.input-group-prepend{
+		background-color: #e4e4e4;
+	}
+	.input-group-text{
+		padding: 15px !important;
+	}
+	
+	input, button {
+		font-family: 'Dosis', sans-serif;
+		letter-spacing: 1.3px;
+		width: 340px;
+	}
+	
+	.register_part {
+		text-align: center;
+	}
+	
+	input:focus {
+		border-image-slice: 1;
+	}
+	
+	input:focus + i {
+		color:black;
+	}
+	
+	::placeholder {
+		color: black;
+		opacity: .6;
+		font-weight: 600;
+	}
+	
+	i {
+		color: #626571;
+		position: absolute;
+		left: 6px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: color .3s;
+	}
+	
+	button {
+		color: white;
+		font-size: 16px;
+		cursor: pointer;
+		transition: all .3s;
+		margin-top: 20px;
+		margin-bottom: -30px;
+		box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.65);
+		transition: all .3s;
+		float: left;
+	}
+	
+	button:hover {
+		background: #3f4048;
+		box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.65);
+	}
+}
+
+
+
+@media screen and (max-width: 620px) {
+	.register_App {
+		min-height: 300px;
+		max-height: 630px;
+		width: 90vw;
+
+		.input-container {
+			width: 80%;
+			margin-bottom: 40px;
+		}
+	
+		button {
+			margin-top: 10px;
+			width: 250px;
+		}
+	}
+
+	
+}

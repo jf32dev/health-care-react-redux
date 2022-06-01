@@ -1,0 +1,56 @@
+.video-player {
+  position: relative;
+  padding-top: 67%;
+  .player-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: none;
+    border: 10px solid #273244;
+    border-radius: 5px;
+    .play-btn {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+    }
+    .video-title {
+      position: absolute;
+      z-index: 20;
+      color: white;
+      margin: 0;
+    }
+    video {
+        object-fit: fill;
+        position: relative;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .video-player {
+    .video-title {
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .video-player {
+    .video-title {
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      font-size: 15px;
+    }
+  }
+}

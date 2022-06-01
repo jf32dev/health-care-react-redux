@@ -1,0 +1,21 @@
+.home-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .home-content {
+    overflow-y: auto;
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-layout {
+    padding-top: 55px;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-layout {
+    padding-top: 44px;
+  }
+}
